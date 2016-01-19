@@ -5,7 +5,7 @@
 #PBS -o tf_binnding.sh.o4144289
 #PBS -e tf_binding.sh.e4144289
 #PBS -V
-#PBS -M abanisad@ucsd.edu
+#PBS -M abanisad@ucsd.edu, arguziko@ucsd.edu
 #PBS -m abe
 #PBS -A ucsd-train15
 cd /oasis/tscc/scratch/ucsd-train15/code/biom262-2016/weeks/week01/biom262-hw1
