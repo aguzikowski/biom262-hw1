@@ -1,4 +1,4 @@
-#PBS -q hotel>
+#PBS -q hotel
 #PBS -N tf_binding.sh
 #PBS -l nodes=10:ppn=2
 #PBS -l walltime=0:50:00
@@ -8,7 +8,7 @@
 #PBS -M abanisad@ucsd.edu
 #PBS -m abe
 #PBS -A ucsd-train15
-cd /oasis/tscc/scratch/ucsd-train15
+cd /oasis/tscc/scratch/ucsd-train15/code/biom262-2016/weeks/week01/biom262-hw1
 
 
 ## Exercise 4
