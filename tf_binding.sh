@@ -16,6 +16,19 @@ echo "Hello I am a message in standard out (stdout)"
 echo "Hello I am a message in standard error (stderr) >&2
 >>>>>>> 9e094cb1ac25076de12b4082115528fc0fb59cc0
 
+## Exercise 1
+
+%%bash --out exercise1
+cat tf.bed | awk '{if ($4 == "NFKB") print$0}' > tf.nfkb.bed
+
+wc -l tf.nfkb.bed
+echo '--- First 10 lines ---'
+head tf.nfkb.bed
+echo '--- Random 10 lines ---'
+awk -v seed=907 'BEGIN{srand(seed);}{ if (rand() < 0.5 ) {print $0}}'  tf.nfkb.bed | head
+echo '--- Last 10 lines ---'
+tail tf.nfkb.bed
+
 ## Exercise 2
 
 %%bash --out exercise2
