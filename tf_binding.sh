@@ -16,6 +16,19 @@ echo "Hello I am a message in standard out (stdout)"
 echo "Hello I am a message in standard error (stderr) >&2
 >>>>>>> 9e094cb1ac25076de12b4082115528fc0fb59cc0
 
+## Exercise 2
+
+%%bash --out exercise2
+cat gencode.v19.annotation.chr22.gtf | awk '{if($3 == "transcript")print}' > gencode.v19.annotation.chr22.transcript.gtf
+
+wc -l gencode.v19.annotation.chr22.transcript.gtf
+echo '--- First 10 lines ---'
+head gencode.v19.annotation.chr22.transcript.gtf
+echo '--- Random 10 lines ---'
+awk -v seed=907 'BEGIN{srand(seed);}{ if (rand() < 0.5 ) {print $0}}'  gencode.v19.annotation.chr22.transcript.gtf | head
+echo '--- Last 10 lines ---'
+tail gencode.v19.annotation.chr22.transcript.gtf
+
 ## Exercise 3
 
 %%bash --out exercise3
