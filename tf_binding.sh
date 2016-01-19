@@ -10,11 +10,10 @@
 #PBS -A ucsd-train15
 cd /oasis/tscc/scratch/ucsd-train15/code/biom262-2016/weeks/week01/biom262-hw1
 
-<<<<<<< HEAD
 echo "Hello I am a message in standard out (stdout)"
-=======
+
 echo "Hello I am a message in standard error (stderr) >&2
->>>>>>> 9e094cb1ac25076de12b4082115528fc0fb59cc0
+
 
 ## Exercise 1
 
