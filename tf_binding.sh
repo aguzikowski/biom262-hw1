@@ -10,7 +10,25 @@
 #PBS -A ucsd-train15
 cd /oasis/tscc/scratch/ucsd-train15/code/biom262-2016/weeks/week01/biom262-hw1
 
+<<<<<<< HEAD
 echo "Hello I am a message in standard out (stdout)"
+=======
+echo "Hello I am a message in standard error (stderr) >&2
+>>>>>>> 9e094cb1ac25076de12b4082115528fc0fb59cc0
+
+## Exercise 3
+
+%%bash --out exercise3
+module load biotools
+bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 2000 -r 0 -s > gencode.v19.annotation.chr22.transcript.promoter.gtf
+
+wc -l gencode.v19.annotation.chr22.transcript.promoter.gtf
+echo '--- First 10 lines ---'
+head gencode.v19.annotation.chr22.transcript.promoter.gtf
+echo '--- Random 10 lines ---'
+awk -v seed=907 'BEGIN{srand(seed);}{ if (rand() < 0.5 ) {print $0}}' gencode.v19.annotation.chr22.transcript.promoter.gtf | head
+echo '--- Last 10 lines ---'
+tail gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 ## Exercise 4
 %%bash --out exercise4
