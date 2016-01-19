@@ -10,6 +10,7 @@
 #PBS -A ucsd-train15
 cd /oasis/tscc/scratch/ucsd-train15/code/biom262-2016/weeks/week01/biom262-hw1
 
+echo "Hello I am a message in standard error (stderr) >&2
 
 ## Exercise 4
 %%bash --out exercise4
