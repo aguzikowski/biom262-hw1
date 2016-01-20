@@ -1,23 +1,20 @@
+#!/bin/csh
 #PBS -q hotel
 #PBS -N tf_binding.sh
-#PBS -l nodes=10:ppn=2
-#PBS -l walltime=0:50:00
-#PBS -o tf_binnding.sh.o4144289
-#PBS -e tf_binding.sh.e4144289
+#PBS -l nodes=1:ppn=2
+#PBS -l walltime=0:10:00
 #PBS -V
-#PBS -M abanisad@ucsd.edu, arguziko@ucsd.edu
+#PBS -M arguziko@ucsd.edu
 #PBS -m abe
-#PBS -A ucsd-train15
-cd /oasis/tscc/scratch/ucsd-train15/code/biom262-2016/weeks/week01/biom262-hw1
+cd ~/code/biom262-2016/weeks/week01/data
 
 echo "Hello I am a message in standard out (stdout)"
 
-echo "Hello I am a message in standard error (stderr) >&2
+echo "Hello I am a message in standard error (stderr)" >&2
 
 
 ## Exercise 1
 
-%%bash --out exercise1
 cat tf.bed | awk '{if ($4 == "NFKB") print$0}' > tf.nfkb.bed
 
 wc -l tf.nfkb.bed
@@ -30,7 +27,6 @@ tail tf.nfkb.bed
 
 ## Exercise 2
 
-%%bash --out exercise2
 cat gencode.v19.annotation.chr22.gtf | awk '{if($3 == "transcript")print}' > gencode.v19.annotation.chr22.transcript.gtf
 
 wc -l gencode.v19.annotation.chr22.transcript.gtf
@@ -43,7 +39,6 @@ tail gencode.v19.annotation.chr22.transcript.gtf
 
 ## Exercise 3
 
-%%bash --out exercise3
 module load biotools
 bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 2000 -r 0 -s > gencode.v19.annotation.chr22.transcript.promoter.gtf
 
@@ -56,7 +51,6 @@ echo '--- Last 10 lines ---'
 tail gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 ## Exercise 4
-%%bash --out exercise4
 
 module load biotools
 
@@ -71,7 +65,6 @@ echo '--- Last 10 lines ---'
 tail gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
 
 ## Excercise 5
-%%bash --out exercise5
 
 module load biotools
 
