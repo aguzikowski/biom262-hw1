@@ -1,7 +1,7 @@
 #PBS -q hotel
 #PBS -N tf_binding.sh
-#PBS -l nodes=10:ppn=2
-#PBS -l walltime=0:50:00
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=0:15:00
 #PBS -o tf_binnding.sh.o4144289
 #PBS -e tf_binding.sh.e4144289
 #PBS -V
