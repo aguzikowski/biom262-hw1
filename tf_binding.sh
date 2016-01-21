@@ -1,7 +1,6 @@
 #!/bin/csh
 #PBS -q hotel
 #PBS -N tf_binding.sh
-<<<<<<< HEAD
 #PBS -l nodes=1:ppn=1
 #PBS -l walltime=0:05:00
 #PBS -V
