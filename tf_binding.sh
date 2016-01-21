@@ -8,7 +8,7 @@
 #PBS -V
 #PBS -M arguziko@ucsd.edu,abanisad@ucsd.edu
 #PBS -m abe
-cd ~/code/biom262-2016/weeks/week01/data/
+cd /home/ucsd-train15/code/biom262-2016/weeks/week01/data/
 
 echo "Hello I am a message in standard out (stdout)"
 
