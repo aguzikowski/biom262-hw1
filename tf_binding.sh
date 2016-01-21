@@ -1,12 +1,37 @@
 #!/bin/csh
 #PBS -q hotel
 #PBS -N tf_binding.sh
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+#PBS -l nodes=1:ppn=1
+#PBS -l walltime=0:05:00
+=======
+<<<<<<< HEAD
+>>>>>>> 9e021b64c9cc15ec2d5968dd802baf98279ee3d6
 #PBS -l nodes=1:ppn=2
 #PBS -l walltime=0:10:00
 #PBS -V
 #PBS -M arguziko@ucsd.edu
+<<<<<<< HEAD
+=======
+=======
+#PBS -l nodes=1:ppn=8
+#PBS -l walltime=0:15:00
+>>>>>>> f37c26c386754e8c45378bd1e9e55211399c8870
+#PBS -o tf_binnding.sh.o4144289
+#PBS -e tf_binding.sh.e4144289
+#PBS -V
+#PBS -M abanisad@ucsd.edu
+>>>>>>> 80bd0218e6344c942b061a46c246cae99372200a
+>>>>>>> 9e021b64c9cc15ec2d5968dd802baf98279ee3d6
 #PBS -m abe
+<<<<<<< HEAD
+#PBS -A ucsd-train15
+cd ~/code/biom262-2016/weeks/week01/data/
+=======
 cd ~/code/biom262-2016/weeks/week01/data
+>>>>>>> f37c26c386754e8c45378bd1e9e55211399c8870
 
 echo "Hello I am a message in standard out (stdout)"
 
@@ -39,7 +64,10 @@ tail gencode.v19.annotation.chr22.transcript.gtf
 
 ## Exercise 3
 
+<<<<<<< HEAD
+=======
 module load biotools
+>>>>>>> f37c26c386754e8c45378bd1e9e55211399c8870
 bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 2000 -r 0 -s > gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 wc -l gencode.v19.annotation.chr22.transcript.promoter.gtf
@@ -52,7 +80,6 @@ tail gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 ## Exercise 4
 
-module load biotools
 
 bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf.nfkb.bed > gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
 
@@ -65,8 +92,11 @@ echo '--- Last 10 lines ---'
 tail gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
 
 ## Excercise 5
+<<<<<<< HEAD
+=======
 
 module load biotools
+>>>>>>> f37c26c386754e8c45378bd1e9e55211399c8870
 
 bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -s -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta
 
