@@ -1,9 +1,10 @@
 #!/bin/csh
 #PBS -q hotel
 #PBS -N tf_binding.sh
-<<<<<<< HEAD
 #PBS -l nodes=1:ppn=1
 #PBS -l walltime=0:05:00
+#PBS -e tf_binding_error.e
+#PBS -o tf_binding_output.o
 #PBS -V
 #PBS -M arguziko@ucsd.edu,abanisad@ucsd.edu
 #PBS -m abe
@@ -53,7 +54,6 @@ echo '--- Last 10 lines ---'
 tail gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 ## Exercise 4
-
 
 bedtools intersect -a gencode.v19.annotation.chr22.transcript.promoter.gtf -b tf.nfkb.bed > gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
 
