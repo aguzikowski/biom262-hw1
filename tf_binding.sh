@@ -12,12 +12,12 @@ cd ~/code/biom262-2016/weeks/week01/data/
 
 echo "Hello I am a message in standard out (stdout)"
 
-echo "Hello I am a message in standard error (stderr)" >&2
+echo "Hello I am a message in standard error (stderr)" > &2
 
 
 ## Exercise 1
 
-cat tf.bed | awk -F "t\" '{if ($4 == "NFKB") {print$0}}' tf.bed  > tf.nfkb.bed
+cat tf.bed | awk -F "\t" '{if ($4 == "NFKB") {print $0}}' tf.bed  > tf.nfkb.bed
 
 wc -l tf.nfkb.bed
 echo '--- First 10 lines ---'
@@ -29,7 +29,7 @@ tail tf.nfkb.bed
 
 ## Exercise 2
 
-cat gencode.v19.annotation.chr22.gtf | awk -F "t\" '{if($3 == "transcript"){print $0}}' gencode.v19.annotation.chr22.gtf > gencode.v19.annotation.chr22.transcript.gtf
+cat gencode.v19.annotation.chr22.gtf | awk -F "\t" '{if($3 == "transcript"){print $0}}' gencode.v19.annotation.chr22.gtf > gencode.v19.annotation.chr22.transcript.gtf
 
 wc -l gencode.v19.annotation.chr22.transcript.gtf
 echo '--- First 10 lines ---'
