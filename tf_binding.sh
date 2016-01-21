@@ -1,12 +1,11 @@
 #!/bin/csh
 #PBS -q hotel
 #PBS -N tf_binding.sh
+<<<<<<< HEAD
 #PBS -l nodes=1:ppn=1
 #PBS -l walltime=0:05:00
 #PBS -V
-#PBS -M arguziko@ucsd.edu
-#PBS -V
-#PBS -M abanisad@ucsd.edu
+#PBS -M arguziko@ucsd.edu,abanisad@ucsd.edu
 #PBS -m abe
 cd ~/code/biom262-2016/weeks/week01/data/
 
