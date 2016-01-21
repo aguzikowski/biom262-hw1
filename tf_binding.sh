@@ -40,10 +40,8 @@ tail gencode.v19.annotation.chr22.transcript.gtf
 
 ## Exercise 3
 
-<<<<<<< HEAD
-=======
 module load biotools
->>>>>>> f37c26c386754e8c45378bd1e9e55211399c8870
+
 bedtools flank -i gencode.v19.annotation.chr22.transcript.gtf -g hg19.genome -l 2000 -r 0 -s > gencode.v19.annotation.chr22.transcript.promoter.gtf
 
 wc -l gencode.v19.annotation.chr22.transcript.promoter.gtf
@@ -68,11 +66,8 @@ echo '--- Last 10 lines ---'
 tail gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf
 
 ## Excercise 5
-<<<<<<< HEAD
-=======
 
 module load biotools
->>>>>>> f37c26c386754e8c45378bd1e9e55211399c8870
 
 bedtools getfasta -fi GRCh37.p13.chr22.fa -bed gencode.v19.annotation.chr22.transcript.promoter.nfkb.gtf -s -fo gencode.v19.annotation.chr22.transcript.promoter.nfkb.fasta
 
